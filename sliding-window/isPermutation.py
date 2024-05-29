@@ -1,9 +1,7 @@
 '''
 Problem: Given two strings s1 and s2, write a function 
-to return true if s2 contains the permutation of s1.
+to return true if s2 is a permutation of s1.
 
-Approach: Use a sliding window to compare the character 
-count of the current window in s2 with the character count of s1
 '''
 
 def Solve(s1,s2):
