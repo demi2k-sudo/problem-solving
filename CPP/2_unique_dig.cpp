@@ -21,7 +21,7 @@ vector<int>  common_digits(vector<int>nums){
 }  
 
 int main(){
-    vector<int> v = {131,11,48};
+    vector<int> v = {567,890,241};
     v = common_digits(v);
     for(auto i:v) cout<<i<<endl;
 }
