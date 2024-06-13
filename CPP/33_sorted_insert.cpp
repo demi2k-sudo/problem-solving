@@ -14,29 +14,37 @@ struct Node
 };
 Node *sortedInsert(Node* head, int data)
 {
-    Node *boy = new Node(data);
-    Node *temp = NULL;
-    temp = head;
-    if(data<head->data){
-        while(temp->next->data>temp->data) temp = temp->next;
-        boy->next = head;
-        temp->next = boy;
-        head = boy;
+    //Your code here
+    Node* curr= head;
+    Node* temp= new Node(data);
+    
+    if(!curr){
+        temp->next=temp;
+        head= temp;
         return head;
     }
-    while(temp->next->data>temp->data){
+    
+    else if(head && temp->data<=head->data){
+        while(curr && curr->next && curr->next!=head)
+        curr= curr->next;
         
-        if (temp->next->data>data){
-            boy->next = temp->next;
-            temp->next = boy;
-            break;
+        curr->next= temp;
+        temp->next=head;
+        return temp;
+    }
+    
+    
+    else{
+        
+        while(curr && curr->next && curr->next!=head && curr->next->data<=data)
+        {
+            curr= curr->next;
         }
-        temp=temp->next;
+        
+        
+            temp->next= curr->next;
+            curr->next= temp;
+            return head;
     }
-    if(!boy->next){
-        boy->next = temp->next;
-        temp->next = boy;
-    }
-    return head;
-            
+    
 }
