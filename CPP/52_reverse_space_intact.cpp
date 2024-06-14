@@ -6,7 +6,6 @@ string reverseWithSpacesIntact(string S) {
     string result = S;  // Copy S to result to preserve spaces in their original places
     int j = n - 1;
 
-    // Traverse the string from the end and place characters in the result
     for (int i = 0; i < n; ++i) {
         if (S[i] != ' ') {
             // Skip spaces in the result string
