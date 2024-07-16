@@ -2,7 +2,6 @@
 using namespace std;
 
 int canReach(long long a, long long b, long long x) {
-    // code here
     long long minDistance = abs(a) + abs(b);
     if (minDistance == x) return true;
     if (minDistance > x) return false;
